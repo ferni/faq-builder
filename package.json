@@ -37,9 +37,9 @@
       "branch": "gh-pages",
       "folder": "public",
       "script": "npm run build",
-      "commit": "Updated build.",
+      "commit": "Update build.",
       "user": {
-        "email": "deploy@script.com",
+        "email": "deploy-script@makerdao.com",
         "name": "Deploy Script"
       }
     }
