@@ -1,0 +1,2 @@
+webpackJsonp([0x7366e385ed5c],{326:function(e,t){e.exports={data:{markdownRemark:{html:"<h1>markdown-files</h1>",frontmatter:{date:"November 07, 2017",path:"/the-readme",title:"It's the readme!"}}},pathContext:{}}}});
+//# sourceMappingURL=path---the-readme-97aaedd802eeaf43ccdb.js.map
