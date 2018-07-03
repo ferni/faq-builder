@@ -39,8 +39,8 @@
       "script": "npm run build",
       "commit": "Updated build.",
       "user": {
-        "email": "fertiberti@gmail.com",
-        "name": "Fernando Tiberti"
+        "email": "deploy@script.com",
+        "name": "Deploy Script"
       }
     }
   }
