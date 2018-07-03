@@ -19,14 +19,29 @@
     "build": "node download-faq && gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "deploy-to-git"
   },
   "devDependencies": {
+    "deploy-to-git": "^0.1.5",
     "github-download": "^0.5.0",
     "prettier": "^1.12.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ferni/gastby-test"
+  },
+  "config": {
+    "deployToGit": {
+      "repository": "https://github.com/ferni/gatsby-test.git",
+      "branch": "gh-pages",
+      "folder": "public",
+      "script": "npm run build",
+      "commit": "Updated build.",
+      "user": {
+        "email": "fertiberti@gmail.com",
+        "name": "Fernando Tiberti"
+      }
+    }
   }
 }
