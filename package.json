@@ -35,7 +35,7 @@
     "deployToGit": {
       "repository": "https://github.com/makerdao/faq-test.git",
       "branch": "gh-pages",
-      "folder": "public",
+      "folder": "remove-this-folder",
       "script": "npm run build",
       "commit": "Update build.",
       "user": {

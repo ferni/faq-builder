@@ -6,7 +6,7 @@ yarn-error.log
 # Build directory
 /public
 .DS_Store
+/remove-this-folder
 
 .idea
-markdown-files
-!markdown-files/placeholder-page.md
+/markdown-files
