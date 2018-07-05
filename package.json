@@ -33,7 +33,7 @@
   },
   "config": {
     "deployToGit": {
-      "repository": "https://github.com/ferni/gatsby-test.git",
+      "repository": "https://github.com/makerdao/faq-test.git",
       "branch": "gh-pages",
       "folder": "public",
       "script": "npm run build",

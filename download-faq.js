@@ -4,7 +4,7 @@ Downloads faq markdown into ./markdown-files
 const execSync = require('child_process').execSync;
 execSync('rm -r ./markdown-files');
 const ghdownload = require('github-download');
-const repoUrl = 'https://github.com/ferni/markdown-files.git';
+const repoUrl = 'https://github.com/makerdao/faq-test.git';
 console.log(`Downloading markdown files from ${repoUrl} ...`);
 ghdownload(repoUrl, './markdown-files')
   .on('dir', function(dir) {
