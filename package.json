@@ -20,28 +20,15 @@
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "deploy-to-git"
+    "deploy": "npm run build && git-directory-deploy --directory public/ --repo https://github.com/makerdao/faq-test.git"
   },
   "devDependencies": {
-    "deploy-to-git": "^0.1.5",
+    "git-directory-deploy": "^1.5.1",
     "github-download": "^0.5.0",
     "prettier": "^1.12.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ferni/gastby-test"
-  },
-  "config": {
-    "deployToGit": {
-      "repository": "https://github.com/makerdao/faq-test.git",
-      "branch": "gh-pages",
-      "folder": "remove-this-folder",
-      "script": "npm run build",
-      "commit": "Update build.",
-      "user": {
-        "email": "deploy-script@makerdao.com",
-        "name": "Deploy Script"
-      }
-    }
   }
 }
