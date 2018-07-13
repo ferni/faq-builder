@@ -1,4 +1,5 @@
 import React from "react";
+const slugs = require("github-slugger")();
 
 export default function Template({
                                    data, // this prop will be injected by the GraphQL query below.
@@ -10,7 +11,7 @@ export default function Template({
         <h1 key={pageIndex}><a href={node.fields.slug}>{node.fields.slug}</a></h1>
         <ul>
         {node.headings.map(({ value }, headingIndex) =>
-          <li key={headingIndex}><a href={`${node.fields.slug}#${value}`}>{value}</a></li>
+          <li key={'heading' + headingIndex}><a href={`${node.fields.slug}#${slugs.slug(value)}`}>{value}</a></li>
         )}
         </ul>
         </div>
