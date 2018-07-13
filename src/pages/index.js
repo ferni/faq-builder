@@ -7,10 +7,10 @@ export default function Template({
     <div>
       {data.allMarkdownRemark.edges.map(({ node }, pageIndex) =>
         <div>
-        <h1 key={pageIndex}><a href={node.frontmatter.path}>{node.frontmatter.path}</a></h1>
+        <h1 key={pageIndex}><a href={node.fields.slug}>{node.fields.slug}</a></h1>
         <ul>
-        {node.headings.map(({ value }, index) =>
-          <li><a href={`${node.frontmatter.path}/#${value}`}>{value}</a></li>
+        {node.headings.map(({ value }, headingIndex) =>
+          <li key={headingIndex}><a href={`${node.fields.slug}#${value}`}>{value}</a></li>
         )}
         </ul>
         </div>
@@ -24,8 +24,8 @@ export const pageQuery = graphql`
     allMarkdownRemark {
       edges {
         node {
-          frontmatter {
-            path
+          fields {
+            slug
           }
           headings {
             value
