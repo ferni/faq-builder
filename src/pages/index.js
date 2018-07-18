@@ -7,13 +7,13 @@ export default function Template({
   return (
     <div>
       {data.allMarkdownRemark.edges.map(({ node }, pageIndex) =>
-        <div>
-        <h1 key={pageIndex}><a href={node.fields.slug}>{node.fields.slug}</a></h1>
-        <ul>
-        {node.headings.map(({ value }, headingIndex) =>
-          <li key={'heading' + headingIndex}><a href={`${node.fields.slug}#${slugs.slug(value)}`}>{value}</a></li>
-        )}
-        </ul>
+        <div key={pageIndex}>
+          <h1><a href={node.fields.slug}>{node.frontmatter.title || node.fields.slug}</a></h1>
+          <ul>
+          {node.headings.map(({ value }, headingIndex) =>
+            <li key={'heading' + headingIndex}><a href={`${node.fields.slug}#${slugs.slug(value)}`}>{value}</a></li>
+          )}
+          </ul>
         </div>
       )}
     </div>
@@ -31,6 +31,9 @@ export const pageQuery = graphql`
           headings {
             value
             depth
+          }
+          frontmatter {
+            title
           }
         }
       }
