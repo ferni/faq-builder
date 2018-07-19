@@ -37,17 +37,140 @@ const Layout = ({ children, data }) => (
       <script async src="https://www.googletagmanager.com/gtag/js?id=AW-819827802" />
       <script>{` window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-819827802'); `}</script>
     </Helmet>
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
+    <div id="content">
+      <header className="centered">
+        <i id="menu-bars" className="fa fa-bars" aria-hidden="true"></i>
+        <a href="/"><img id="logo" src="/assets/img/MKR-logo-rounded.svg"/></a>
+        <nav id="top-nav">
+          <div className="menu-container">
+            <span className="menu-category">Learn <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+            <div className="menu">
+              <a href="https://developer.makerdao.com/">Development</a><br/>
+              <a href="https://stable.fund/" target="_blank">The Stable Fund</a><br/>
+              <a href="/whitepaper" target="_blank">White Paper <span className="on-desktop"> (Overview)</span></a><br/>
+              <a href="/purple" target="_blank">Purple Paper <span className="on-desktop"> (Formal Spec)</span></a><br/>
+            </div>
+          </div>
+          <div className="menu-container">
+            <span className="menu-category">Governance <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+            <div className="menu">
+              <a href="https://www.youtube.com/channel/UC4jqZlzQHUhzqf5rMd5ywTw" target="_blank">Recordings of Meetings</a><br/>
+              <a href="https://medium.com/@MakerDAO/what-is-mkr-e6915d5ca1b3" target="_blank">What is MKR coin?</a><br/>
+            </div>
+          </div>
+          <div className="menu-container">
+            <span className="menu-category">Products <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+            <div className="menu">
+              <a href="https://dai.makerdao.com/" title="Open CDPs and borrow Dai">Dai Dashboard</a><br/>
+              <a href="https://oasis.direct/" title="Simple token swap dapp">Oasis Direct</a><br/>
+              <a href="https://mkr.tools/" target="_blank">Platform Data</a><br/>
+            </div>
+          </div>
+          <div className="menu-container">
+            <span className="menu-category">Community <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+            <div className="menu">
+              <a href="https://chat.makerdao.com" target="_blank">Chat</a><br/>
+              <a href="https://www.reddit.com/r/MakerDAO/" target="_blank">Subreddit</a><br/>
+              <a href="https://medium.com/@MakerDAO" target="_blank">Blog</a><br/>
+              <a href="https://twitter.com/MakerDAO" target="_blank">Twitter</a><br/>
+            </div>
+          </div>
+          <div className="menu-container">
+            <span className="menu-category">Team <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+            <div className="menu">
+              <a href="/team">Meet Maker</a><br/>
+              <a href="/careers">Careers</a><br/>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div id="jumbo">
+        <div id="jumbo-content">
+          <div className="centered"><span id="jumbo-legend">FAQs</span></div>
+        </div>
+      </div>
+
+      <div id="main-content" className="centered">
+        {children()}
+      </div>
+
+      <footer>
+        <div id="subscribe-and-text" className="centered">
+          <div id="subscribe">
+            <span className="big-text">Stay Updated with Maker</span>
+            <div id="mc_embed_signup">
+              <form action="//makerdao.us16.list-manage.com/subscribe/post?u=f717b15a4a763e79ee910dbe6&amp;id=86313139e4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                <div id="mc_embed_signup_scroll">
+
+                  <input type="email" value="" name="EMAIL" className="email" id="mce-EMAIL" placeholder="Email address" required />
+                    <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true"><input type="text" name="b_f717b15a4a763e79ee910dbe6_86313139e4" tabIndex="-1" value="" /></div>
+                    <input type="submit" value="Subscribe" name="subscribe" className="button" />
+
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="dai-foundation-text">
+            <p>
+              <strong>The Dai Stablecoin System</strong> was developed by Maker.
+              Our team consists of developers, economists and designers from all over the world.
+              Our decentralized autonomous organization is governed by our token holders.
+            </p>
+          </div>
+        </div>
+        <div id="links" className="centered">
+          <div className="link-group">
+            <span className="link-category">Learn </span><br/>
+            <a href="https://developer.makerdao.com/">Development</a><br/>
+            <a href="https://stable.fund/" target="_blank">The Stable Fund</a><br/>
+            <a href="/whitepaper" target="_blank">White Paper <span className="on-desktop"> (Overview)</span></a><br/>
+            <a href="/purple" target="_blank">Purple Paper <span className="on-desktop"> (Formal Spec)</span></a><br/>
+          </div>
+          <div className="link-group">
+            <span className="link-category">Governance </span><br/>
+            <a href="https://www.youtube.com/channel/UC4jqZlzQHUhzqf5rMd5ywTw" target="_blank">Recordings of Meetings</a><br/>
+            <a href="https://medium.com/@MakerDAO/what-is-mkr-e6915d5ca1b3" target="_blank">What is MKR coin?</a><br/>
+          </div>
+          <div className="link-group">
+            <span className="link-category">Products </span><br/>
+            <a href="https://dai.makerdao.com/" title="Open CDPs and borrow Dai">Dai Dashboard</a><br/>
+            <a href="https://oasis.direct/" title="Simple token swap dapp">Oasis Direct</a><br/>
+            <a href="https://mkr.tools/" target="_blank">Platform Data</a><br/>
+          </div>
+          <div className="link-group">
+            <span className="link-category">Community </span><br/>
+            <a href="https://chat.makerdao.com" target="_blank">Chat</a><br/>
+            <a href="https://www.reddit.com/r/MakerDAO/" target="_blank">Subreddit</a><br/>
+            <a href="https://medium.com/@MakerDAO" target="_blank">Blog</a><br/>
+            <a href="https://twitter.com/MakerDAO" target="_blank">Twitter</a><br/>
+          </div>
+          <div className="link-group">
+            <span className="link-category">Team </span><br/>
+            <a href="/team">Meet Maker</a><br/>
+            <a href="/careers">Careers</a><br/>
+          </div>
+        </div>
+        <div id="icon-links" className="centered">
+          <a className="icon-link" href="https://chat.makerdao.com" target="_blank"><i className="fa fa-commenting"></i></a>
+          <a className="icon-link" href="https://reddit.com/r/makerdao" target="_blank"><i className="fa fa-reddit"></i></a>
+          <a className="icon-link" href="https://github.com/makerdao" target="_blank"><i className="fa fa-github"></i></a>
+        </div>
+        <div className="dark">
+          <div id="copyright" className="centered">
+            <img src="/assets/img/maker_white.svg" width="37"/><span>© Dai Foundation 2017</span>
+          </div>
+        </div>
+      </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"></script>')</script>
+
+      <script src="../js/plugins.js"></script>
+      <script src="../js/main.js"></script>
+
+
+
   </div>
 )
 
