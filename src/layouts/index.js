@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
+import '../util/main.js'
 import './index.css'
 
 const Layout = ({ children, data }) => (
@@ -162,15 +162,6 @@ const Layout = ({ children, data }) => (
         </div>
       </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"></script>')</script>
-
-      <script src="../js/plugins.js"></script>
-      <script src="../js/main.js"></script>
-
-
-
   </div>
 )
 
