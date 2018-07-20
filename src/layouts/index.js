@@ -4,6 +4,9 @@ import Helmet from 'react-helmet'
 
 import '../util/main.js'
 import './index.css'
+import favicon from '../assets/img/favicon.png'
+import makerWhiteImg from '../assets/img/maker_white.svg'
+import makerLogo from '../assets/img/MKR-logo-rounded.svg'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -15,12 +18,8 @@ const Layout = ({ children, data }) => (
       <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
       <meta name="keywords" content="digital currency, decentralized stablecoin, decentralized money, stable token, stable coin, Stablecoin, stabletoken, stable digital currency, international money, stable store of value, ethereum, blockchain" />
 
-      <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="stylesheet" href="/css/normalize.min.css" />
-      <link rel="stylesheet" href="/css/main.css?v=6" />
+      <link rel="icon" type="image/png" href={favicon} />
 
-      <script src="/js/vendor/modernizr-custom.js" />
       <script src="https://use.fontawesome.com/7454cf21dc.js" />
       {/* Google Analytics */}
       <script>{`
@@ -40,7 +39,7 @@ const Layout = ({ children, data }) => (
     <div id="content">
       <header className="centered">
         <i id="menu-bars" className="fa fa-bars" aria-hidden="true"></i>
-        <a href="/"><img id="logo" src="/assets/img/MKR-logo-rounded.svg"/></a>
+        <a href="/"><img id="logo" src={makerLogo}/></a>
         <nav id="top-nav">
           <div className="menu-container">
             <span className="menu-category">Learn <i className="fa fa-angle-down" aria-hidden="true"></i></span>
@@ -157,7 +156,7 @@ const Layout = ({ children, data }) => (
         </div>
         <div className="dark">
           <div id="copyright" className="centered">
-            <img src="/assets/img/maker_white.svg" width="37"/><span>© Dai Foundation 2017</span>
+            <img src={makerWhiteImg} width="37"/><span>© Dai Foundation 2017</span>
           </div>
         </div>
       </footer>
