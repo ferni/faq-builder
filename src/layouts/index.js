@@ -83,15 +83,9 @@ const Layout = ({ children, data }) => (
           </div>
         </nav>
       </header>
-      <div id="jumbo">
-        <div id="jumbo-content">
-          <div className="centered"><span id="jumbo-legend">FAQs</span></div>
-        </div>
-      </div>
 
-      <div id="main-content" className="centered">
-        {children()}
-      </div>
+
+      {children()}
 
       <footer>
         <div id="subscribe-and-text" className="centered">

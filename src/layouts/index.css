@@ -1484,7 +1484,7 @@ footer p {
   }
 }
 
-/* FAQ page only */
+/* FAQ page only (todo: use css modules) */
 #jumbo {
   height: 170px;
 
@@ -1494,6 +1494,7 @@ footer p {
 
 }
 
-#jumbo-legend {
+#jumbo-legend a {
   text-decoration: none;
+  color: white;
 }

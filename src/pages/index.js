@@ -6,18 +6,25 @@ export default function Template({
                                  }) {
   return (
     <div>
-      {data.allMarkdownRemark.edges
-        .filter(({node}) => node.frontmatter.title)
-        .map(({ node }, pageIndex) =>
-          <div key={pageIndex}>
-            <h1><a href={node.fields.slug}>{node.frontmatter.title || node.fields.slug}</a></h1>
-            <ul>
-            {node.headings.map(({ value }, headingIndex) =>
-              <li key={'heading' + headingIndex}><a href={`${node.fields.slug}#${slugs.slug(value)}`}>{value}</a></li>
-            )}
-            </ul>
-          </div>
-        )}
+      <div id="jumbo">
+        <div id="jumbo-content">
+          <div className="centered"><span id="jumbo-legend">FAQ</span></div>
+        </div>
+      </div>
+      <div id="main-content" className="centered">
+        {data.allMarkdownRemark.edges
+          .filter(({node}) => node.frontmatter.title)
+          .map(({ node }, pageIndex) =>
+            <div key={pageIndex}>
+              <h1><a href={node.fields.slug}>{node.frontmatter.title || node.fields.slug}</a></h1>
+              <ul>
+              {node.headings.map(({ value }, headingIndex) =>
+                <li key={'heading' + headingIndex}><a href={`${node.fields.slug}#${slugs.slug(value)}`}>{value}</a></li>
+              )}
+              </ul>
+            </div>
+          )}
+      </div>
     </div>
   );
 }

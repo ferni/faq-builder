@@ -6,9 +6,15 @@ export default function Template({
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { html, frontmatter } = markdownRemark;
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
+    <div>
+      <div id="jumbo">
+        <div id="jumbo-content">
+          <div className="centered">
+            <span id="jumbo-legend"><a href="../" title="Back to FAQ index">FAQ</a>: {frontmatter.title}</span>
+          </div>
+        </div>
+      </div>
+      <div id="main-content" className="centered">
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
