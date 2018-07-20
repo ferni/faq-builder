@@ -4,11 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
- // You can delete this file if you're not using it
-
 const path = require("path");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+// Add slug property
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   if (node.internal.type === `MarkdownRemark`) {
