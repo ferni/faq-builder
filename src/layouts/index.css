@@ -1495,6 +1495,13 @@ footer p {
 }
 
 #jumbo-legend a {
-  text-decoration: none;
   color: white;
+  transition: text-shadow 200ms ease;
+  text-decoration: underline;
+
 }
+
+#jumbo-legend a:hover {
+  text-shadow: black 1px 1px 1px;
+}
+

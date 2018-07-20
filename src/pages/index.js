@@ -1,4 +1,6 @@
 import React from "react";
+import './index.css';
+
 const slugs = require("github-slugger")();
 
 export default function Template({
