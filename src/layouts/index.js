@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
-import '../util/main.js'
 import './index.css'
 import favicon from '../assets/img/favicon.png'
 import makerWhiteImg from '../assets/img/maker_white.svg'
 import makerLogo from '../assets/img/MKR-logo-rounded.svg'
+
+// browser scripts
+if (typeof window !== `undefined`) {
+  require('../util/main.js');
+}
 
 const Layout = ({ children, data }) => (
   <div>

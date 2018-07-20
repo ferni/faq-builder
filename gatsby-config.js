@@ -17,5 +17,6 @@ module.exports = {
         plugins: [`gatsby-remark-autolink-headers`],
       },
     },
-    ]
+    ],
+  pathPrefix: `/faq-test`
 }

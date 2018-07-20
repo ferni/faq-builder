@@ -21,7 +21,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "node download-faq && gatsby build",
+    "build": "node download-faq && gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
