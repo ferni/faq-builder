@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import './normalize.css'
+import './makerdao-site.css'
 import './index.css'
 import favicon from '../assets/img/favicon.png'
 import makerWhiteImg from '../assets/img/maker_white.svg'
