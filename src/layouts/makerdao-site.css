@@ -191,6 +191,11 @@ header nav a, .menu-category {
   .on-mobile {
     display: none;
   }
+
+  .icon-angle-down {
+    width: 22px;
+    height: 21px;
+  }
 }
 
 .menu {
@@ -723,7 +728,7 @@ footer p {
     line-height: 1;
   }
 
-  .menu-category .fa-angle-down {
+  .menu-category .icon-angle-down {
     float: right;
   }
 
