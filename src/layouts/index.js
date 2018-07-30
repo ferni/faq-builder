@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import './normalize.css'
+import './icons.css'
 import './makerdao-site.css'
 import './index.css'
 import favicon from '../assets/img/favicon.png'
@@ -25,7 +26,6 @@ const Layout = ({ children, data }) => (
 
       <link rel="icon" type="image/png" href={favicon} />
 
-      <script src="https://use.fontawesome.com/7454cf21dc.js" />
       {/* Google Analytics */}
       <script>{`
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -43,11 +43,11 @@ const Layout = ({ children, data }) => (
     </Helmet>
     <div id="content">
       <header className="centered">
-        <i id="menu-bars" className="fa fa-bars" aria-hidden="true"></i>
+        <i id="menu-bars" className="icon-menu"></i>
         <a href="/"><img id="logo" src={makerLogo}/></a>
         <nav id="top-nav">
           <div className="menu-container">
-            <span className="menu-category">Learn <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+            <span className="menu-category">Learn <i className="icon-angle-down"></i></span>
             <div className="menu">
               <a href="https://developer.makerdao.com/">Development</a><br/>
               <a href="https://stable.fund/" target="_blank">The Stable Fund</a><br/>
@@ -56,14 +56,14 @@ const Layout = ({ children, data }) => (
             </div>
           </div>
           <div className="menu-container">
-            <span className="menu-category">Governance <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+            <span className="menu-category">Governance <i className="icon-angle-down"></i></span>
             <div className="menu">
               <a href="https://www.youtube.com/channel/UC4jqZlzQHUhzqf5rMd5ywTw" target="_blank">Recordings of Meetings</a><br/>
               <a href="https://medium.com/@MakerDAO/what-is-mkr-e6915d5ca1b3" target="_blank">What is MKR coin?</a><br/>
             </div>
           </div>
           <div className="menu-container">
-            <span className="menu-category">Products <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+            <span className="menu-category">Products <i className="icon-angle-down"></i></span>
             <div className="menu">
               <a href="https://dai.makerdao.com/" title="Open CDPs and borrow Dai">Dai Dashboard</a><br/>
               <a href="https://oasis.direct/" title="Simple token swap dapp">Oasis Direct</a><br/>
@@ -71,7 +71,7 @@ const Layout = ({ children, data }) => (
             </div>
           </div>
           <div className="menu-container">
-            <span className="menu-category">Community <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+            <span className="menu-category">Community <i className="icon-angle-down"></i></span>
             <div className="menu">
               <a href="https://chat.makerdao.com" target="_blank">Chat</a><br/>
               <a href="https://www.reddit.com/r/MakerDAO/" target="_blank">Subreddit</a><br/>
@@ -80,7 +80,7 @@ const Layout = ({ children, data }) => (
             </div>
           </div>
           <div className="menu-container">
-            <span className="menu-category">Team <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+            <span className="menu-category">Team <i className="icon-angle-down"></i></span>
             <div className="menu">
               <a href="/team">Meet Maker</a><br/>
               <a href="/careers">Careers</a><br/>
